@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: bff
+
+management:
+  server:
+    address: 0.0.0.0
+  security:
+    enabled: false
+  endpoint:
+    health:
+      show-details: always
+    web:
+      exposure:
+        include: info, health, mappings
+
+
+apis:
+  account:
+    name: account
+    url: http://localhost:8081/accounts
+  customer:
+    name: customer
+    url: http://localhost:8082/customers
